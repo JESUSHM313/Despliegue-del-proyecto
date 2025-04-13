@@ -14,7 +14,7 @@ const LoginForm = () => {
     formData.append('contraseña', contraseña);
 
     try {
-      const response = await fetch('http://localhost:8080/login/login', {
+      const response = await fetch('https://despliegue-del-proyecto-backend.onrender.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData.toString(),
@@ -34,7 +34,7 @@ const LoginForm = () => {
 
         // Redirigir después de mostrar el mensaje de éxito
         setTimeout(() => {
-          window.location.href = 'http://localhost:8080/login/panel.jsp';
+          window.location.href = 'https://despliegue-del-proyecto-backend.onrender.com/panel.jsp';
         }, 2000); // 2 segundos de espera antes de redirigir
       } else {
         setError(data?.message || 'Credenciales incorrectas o error en la autenticación');
