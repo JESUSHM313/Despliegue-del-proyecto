@@ -33,9 +33,9 @@ const LoginForm = () => {
         setError('');
 
         // Redirigir después de mostrar el mensaje de éxito
-        //setTimeout(() => {
-        //  window.location.href = 'https://despliegue-del-proyecto-backend.onrender.com/panel.jsp';
-       // }, 2000); // 2 segundos de espera antes de redirigir
+        setTimeout(() => {
+          window.location.href = 'https://despliegue-del-proyecto-backend.onrender.com/panel.jsp';
+        }, 2000); // 2 segundos de espera antes de redirigir
       } else {
         setError(data?.message || 'Credenciales incorrectas o error en la autenticación');
         setSuccess('');
